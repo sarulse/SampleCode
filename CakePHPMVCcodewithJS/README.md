@@ -10,7 +10,7 @@ Code is placed in the followiing Files:
  
  (4) JS File: toggleInputs.js
  
- [Languages/Framework/Databases: PHP, HTML, CSS, JavaScript, jquery,  CakePHP]
+ [Languages/Framework/Databases: PHP, HTML, CSS, JavaScript, jquery,  CakePHP, MYSQL]
  
 **Required: CakePHP installation**
 	
