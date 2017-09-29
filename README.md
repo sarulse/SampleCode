@@ -1,4 +1,10 @@
 SampleCode
 ==========
 
-Some Sample Codes
+Some Sample Codes: 
+
+* FindLongestSubString  
+
+* CakePHPMVCCodeWithJS 
+
+Please click on each folder to see the code samples.
