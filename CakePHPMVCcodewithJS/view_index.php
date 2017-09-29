@@ -1,7 +1,5 @@
 <?php
 /*
-
-**	
 **	Subha Arulselvam: View file (app/view/cities/index.ctp) saved as view_index.php 
 **	The file display the input form : City Data
 **	There are three sections in the form: Location, Industries and Statistics.
@@ -10,7 +8,6 @@
 **	To send the email, user has to enter recipient's email address.
 **	Before emailing the form, message will be displayed showing the user inputs on the form, to change any values user has to re-enter the inputs. 
 **	If message is not sent, sender will receive notification in his/her email address.
-
 */
 ?>
 <!DOCTYPE html>
