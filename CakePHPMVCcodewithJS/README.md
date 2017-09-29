@@ -1,4 +1,4 @@
-Smaple “CakePHP ” project 
+Sample “CakePHP ” project 
 	Code is placed in three Files: 
 	 (1) Model File: city.php
 	 (2) Controller File: CitiesController.php 
