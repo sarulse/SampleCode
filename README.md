@@ -1,5 +1,5 @@
 
-**Some Sample Codes:**
+**Some Sample Codes in the following folder:**
 
 * FindLongestSubString  
 
