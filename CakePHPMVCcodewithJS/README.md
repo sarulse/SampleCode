@@ -1,12 +1,12 @@
 ## Sample “CakePHP ” project 
 
-Code is placed in three Files: 
+Code is placed in the followiing Files: 
 
- (1) Model File: city.php
+ (1) Model : city.php
  
- (2) Controller File: CitiesController.php 
+ (2) Controller : CitiesController.php 
  
- (3) View File: view_index.php
+ (3) View : view_index.php
  
  (4) JS File: toggleInputs.js
  
