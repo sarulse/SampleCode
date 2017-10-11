@@ -1,6 +1,7 @@
 ## Sample “CakePHP ” project 
+**Required: CakePHP installation**
 
-Code is placed in the followiing Files: 
+Code is placed in the following Files: 
 
  (1) Model : city.php
  
@@ -11,8 +12,8 @@ Code is placed in the followiing Files:
  (4) JS File: toggleInputs.js
  
  [Languages/Framework/Databases: PHP, HTML, CSS, JavaScript, jquery,  CakePHP, MYSQL]
- 
-**Required: CakePHP installation**
+
+### Summary of the project
 	
 •	A form that collects and displays city data is rendered through view file. 
 
