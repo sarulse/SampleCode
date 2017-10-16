@@ -25,7 +25,7 @@
              	<br/>
              	<input type="submit" value="Submit" onclick=" return validatePhone()">
 	</form>
-<?php	
+    <?php	
 	//Get the entered Phone Number from the Form
 	function getPhoneNo () {
 		if(isset($_POST['phone']))
@@ -233,6 +233,6 @@
     	if (!(empty($ph_no))) {
             printSearchResults();
 	}
-?>
+  ?>
 </body>
 </html>
