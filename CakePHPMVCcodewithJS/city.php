@@ -1,10 +1,8 @@
 <?php
-/*
-**	
+/*	
 **	Subha Arulselvam: Model file (app/Model/city.php)
 **	The file holds model information and validates input fields of the model
 */
-
 class City extends AppModel {
     var $name = 'City'; // Model[Table]  name	
 	

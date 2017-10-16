@@ -1,7 +1,6 @@
 
 	//To hide the section content using jquery
 	$(document).ready(function () {
-
 		// To hide the form input elements but not the title
 		$("#cityLocation").hide();
 		$("#cityIndustries").hide();
@@ -34,7 +33,6 @@
 			if (inputs[i].type == "checkbox" && inputs[i].checked == true) {
 				selected_inputs += inputs[i].value + ','; //since multiple checkboxes could be selected, their values are concatenated using a comma
 			}
-
 		}
 		selected_inputs += "\n";
 		//To display the values of text input of the form

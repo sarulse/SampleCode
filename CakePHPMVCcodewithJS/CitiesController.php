@@ -4,7 +4,6 @@
 **	Subha Arulselvam: Controller file (CitiesController.php)
 **	The file define actions through the functions that is called from view
 */
-
 class CitiesController extends AppController 
 {
      var $name = 'Cities'; // Controller name
