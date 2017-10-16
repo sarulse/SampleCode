@@ -1,5 +1,5 @@
 # Search a Person Record using Phone number #
-## Summary:##
+## Summary: ##
 To implement a search feature using a valid U.S. phone number and then filter the results using full name and state.
 
 * An user can enter a US phone number to look up a person
@@ -7,20 +7,19 @@ To implement a search feature using a valid U.S. phone number and then filter th
 * If no records are found, that information is displayed to the user.
 * If there is a problem with the XML server a notice is sent to the user. 
 * If there are multiple results, clickable full name and state of each record is displayed. 
-* When a record is clicked, a second xml request is created that will display a list of records with the matching name and state.
-  (displayDetail.php)
+* When a record is clicked, a second xml request is created that will display a list of records with the matching name and state.[displaydetail.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/displaydetail.php)
 * When a record is selected from the list, it will display detailed information about the record.
-* Requests and Responses are saved to a MYSQL table (saveResultsToDB.php)
+* Requests and Responses are saved to a MYSQL table [saveResultsToDB.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/saveResultsToDB.php)
 
 Files:
 
-* SearchPersonPart2.php
-* displaydetail.php
-* saveResultsToDB.php
-* urlparams.php
-* JS files :
-  ** showRecord.js
-  ** validatePhone.js
+* [SearchPersonPart2.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/SearchPersonPart2.php)
+* [displaydetail.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/displaydetail.php)
+* [saveResultsToDB.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/saveResultsToDB.php)
+* [urlparams.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/urlparams.php)
+* JS files : *
+  ** [showRecord.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/js/showRecord.js)
+  ** [validatePhone.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/js/svalidatePhone.js)
 
 
 Note:
