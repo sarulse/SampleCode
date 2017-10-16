@@ -1,6 +1,6 @@
 
 
-## An oop program to find the starting position of the longest substring that contains the number of unique characters specified in the input.
+## Using OOP principles to find the starting position of the longest substring that contains the number of unique characters specified in the input.
 
 # File: #
 
