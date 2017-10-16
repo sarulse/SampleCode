@@ -11,15 +11,15 @@ To implement a search feature using a valid U.S. phone number and then filter th
 * When a record is selected from the list, it will display detailed information about the record.
 * Requests and Responses are saved to a MYSQL table [saveResultsToDB.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/saveResultsToDB.php)
 
-Files:
+# Files: #
 
 * [SearchPersonPart2.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/SearchPersonPart2.php)
 * [displaydetail.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/displaydetail.php)
 * [saveResultsToDB.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/saveResultsToDB.php)
 * [urlparams.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/urlparams.php)
-* JS files : *
-  ** [showRecord.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/js/showRecord.js)
-  ** [validatePhone.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/js/svalidatePhone.js)
+* JS files : 
+  * [showRecord.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/js/showRecord.js)
+  * [validatePhone.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonRecords/js/svalidatePhone.js)
 
 
 Note:
