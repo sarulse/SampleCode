@@ -10,7 +10,7 @@
 ## Location of Laravel Files
 
 * Model at [app/Product.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/app/Product.php)
-* Controller at [app/Http/Products.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/app/Http/Products.php)
+* Controller at [app/Http/Products.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/app/Http/Controllers/Products.php)
 * Database migrations at [/database/migrations](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/database/migrations)
 * Routes at [app/Http/routes.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/app/Http/Products.php) 
 
