@@ -19,7 +19,7 @@
 
 * Controller at [public/app/controllers/products.js](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/public/app/controllers/products.js) 
 * App file to define the application at [public/app/app.js](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/public/app/app.js) 
-* Display data from the Rest API using Angular JS at [resources/views/index.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/resources/view/index.php) 
+* Display data from the Rest API using Angular JS at [resources/views/index.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/resources/views/index.php) 
 
 ## Input Validation using Angular JS
 
