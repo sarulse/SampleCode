@@ -1,4 +1,4 @@
-# A Simple Laravel Rest API APP with Angular JS
+# A Simple Laravel Rest API App with Angular JS
 
 ## Summary
     * List of products with details is displayed 
