@@ -42,12 +42,12 @@ class CitiesController extends AppController
 					//Assigning values for mail function such as Recipients email address, Senders address, Subject of the message and the actual message
 					$email_to    = $this->data['City']['email']; // recipient's email addres
 					$to 		= $email_to;
-					$from     = "sarulselv@gmail.com";
+					$from     = "xxxx@gmail.com";
 					$subject  = 'Testing Email capability';
 					$message = "<h2><u>Information about San Diego, CA</h2><br/>";
 					$message  .= $location."<br/>".$industries."<br/>".$statistics;	
-					$headers  = 'From: sarulselv@gmail.com' . "\r\n" .
-								'Reply-To: sarulselv@gmail.com' . "\r\n" .
+					$headers  = 'From:xxxxxx@gmail.com' . "\r\n" .
+								'Reply-To: xxxxx@gmail.com' . "\r\n" .
 								'MIME-Version: 1.0' . "\r\n" .
 								'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
 								'X-Mailer: PHP/' . phpversion();
@@ -83,7 +83,7 @@ class CitiesController extends AppController
 				$this->Session->setFlash(__('No data is entered on the form, Please enter/select the values for the form to be mailed', true));
 				$this->render('index');
 	       }
-     }		
+		   }		
 	
  }
 
