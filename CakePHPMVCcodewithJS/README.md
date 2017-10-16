@@ -30,7 +30,7 @@
  
  (4) JS File: [toggleInputs.js](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS/toggleInputs.js) 
  
- # Snapshot of the app page can be found at [SnapshotsOfCityFormUsingCakePHP](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS/SnapshotsOfCityFormUsingCakePHP.pdf)
+ ### Snapshot of the app page can be found at [SnapshotsOfCityFormUsingCakePHP](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS/SnapshotsOfCityFormUsingCakePHP.pdf)
  
  
  [Languages/Framework/Databases: PHP, HTML, CSS, JavaScript, jquery,  CakePHP, MYSQL]
