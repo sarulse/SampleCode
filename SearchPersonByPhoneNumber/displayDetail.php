@@ -82,8 +82,7 @@
 				$match_found = 0;
 				$resultArray =array();
 				for ($i=0; $i<$count; $i++)
-				{                   
-
+				{       
 						$firstname = $xml_data->recordset->record[$i]->firstname;
 						$lastname = $xml_data->recordset->record[$i]->lastname;
 						$stateName = $xml_data->recordset->record[$i]->state;
