@@ -1,4 +1,5 @@
 ## Sample “CakePHP ” project 
+[Languages/Framework/Database: PHP, HTML, CSS, JavaScript, jquery,  CakePHP, MYSQL]
 
 ### Summary of the project
 	
