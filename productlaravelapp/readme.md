@@ -1,5 +1,7 @@
 # A Simple Laravel Rest API App with Angular JS
 
+Languages/Framework/Database: PHP, Laravel, Angular JS, MYSQL
+
 ## Summary
     * List of products with details is displayed 
     * User can view a list of products
