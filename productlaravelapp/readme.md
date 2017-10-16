@@ -27,6 +27,6 @@ ng-show is used to display error messages if the required field is not filled
 
 ## Location of the Snapshots
 
-Snapshots of the app with each CRUD operation is shown through SnaphotsOfLaravelApp.pdf
+Snapshots of the app with each CRUD operation is shown through [SnaphotsOfLaravelApp.pdf](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/SnaphotsOfLaravelApp.pdf)
 
 
