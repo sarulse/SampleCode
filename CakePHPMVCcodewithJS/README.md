@@ -3,7 +3,7 @@
 
 ### Summary of the project
 	
-*	AN user inputs the data about a City in a HTML form and sends an email. 
+*	An user inputs the data about a City in a HTML form and sends an email. 
 
 *	There are three sections in the form: Location, Industries and Statistics. 
 
