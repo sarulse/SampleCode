@@ -1,7 +1,7 @@
 
 **Some Sample Codes in the following folders:**
 
-* [Laravel RestAPI App With AngularJS](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/rEADME.md)- A laravel REST API app with Angular JS
+* [Laravel RestAPI App With AngularJS](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/readme.md)- A laravel REST API app with Angular JS
 
 * [FindLongestSubString](https://github.com/sarulse/SampleCode/blob/master/FindLongestSubString/README.md)-Simple OOP program to find the longest substring starting point.
 
