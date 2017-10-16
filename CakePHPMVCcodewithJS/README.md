@@ -15,7 +15,7 @@ Code is placed in the following Files:
 
 ### Summary of the project
 	
-•	A form that collects and displays city data is rendered through view file. 
+•	AN user inputs the data about a City in a HTML form and sends an email. 
 
 •	There are three sections in the form: Location, Industries and Statistics. 
 
@@ -23,7 +23,7 @@ Code is placed in the following Files:
 
 •	If the user did not enter the information on required fields, error message will be displayed to re-enter the values on the 	    form. This is done through jquery and JavaScript. 
 
-•	To send the email, user has to enter recipient's email address. 
+•	To send an email, user has to enter recipient's email address. 
 
 •	Before emailing the form, message will be displayed showing the user inputs on the form. To edit any value, user has to re-enter the inputs.  
 
