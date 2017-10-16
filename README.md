@@ -7,4 +7,4 @@
 
 * [CakePHP MVCCode With JS](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS/README.md) 
 
-_Please click on each folder/link to view the code samples._
+__Please click on each folder/link to view the code samples.__
