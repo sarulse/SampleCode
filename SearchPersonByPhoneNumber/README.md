@@ -19,7 +19,7 @@ To implement a search feature using a valid U.S. phone number and then filter th
 * [urlparams.php](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/urlparams.php)
 * JS files : 
   * [showRecord.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/js/showRecord.js)
-  * [validatePhone.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/js/svalidatePhone.js)
+  * [validatePhone.js](https://github.com/sarulse/SampleCode/blob/master/SearchPersonByPhoneNumber/js/validatePhone.js)
 
 
 Note:
