@@ -23,7 +23,7 @@
 
 ## Input Validation using Angular JS
 
-At [index.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/resources/views/index.php) : ng-show is used to display error messages if the required field is not filled 
+At [index.php](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/resources/views/index.php) : ng-show is used to display error messages if the required field is not filled. 
 
 ## Location of the Snapshots
 
