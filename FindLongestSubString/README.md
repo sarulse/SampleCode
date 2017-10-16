@@ -24,7 +24,7 @@ Input:
   ### For Testing:
   Enter input from command line in the format: "php filename.php string number" <br/>
   (OR) <br/>
-  uncomment input values for $string and $no_unique_chrs in the current php file: findLongestSubString file
+  uncomment input values for $string and $no_unique_chrs in the current php file: findLongestSubString.php
  ***************************************************************************************************************
 
 
