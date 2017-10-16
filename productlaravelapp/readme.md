@@ -9,17 +9,17 @@
 
 ## Location of Laravel Files
 
-* Model at [app/Product.php](https://github.com/sarulse/SampleCode/tree/master/app/Product.php)
-* Controller at [app/Http/Products.php](https://github.com/sarulse/SampleCode/tree/master/app/Http/Products.php)
-* Database migrations at [/database/migrations](https://github.com/sarulse/SampleCode/tree/master/database/migrations)
-* Routes at [app/Http/routes.php](https://github.com/sarulse/SampleCode/tree/master/app/Http/Products.php) 
+* Model at [app/Product.php](https://github.com/sarulse/SampleCode/blob/master/app/Product.php)
+* Controller at [app/Http/Products.php](https://github.com/sarulse/SampleCode/blob/master/app/Http/Products.php)
+* Database migrations at [/database/migrations](https://github.com/sarulse/SampleCode/blob/master/database/migrations)
+* Routes at [app/Http/routes.php](https://github.com/sarulse/SampleCode/blob/master/app/Http/Products.php) 
 
 
 ## Location of Angular Files
 
-* Controller at [public/app/controllers/products.js](https://github.com/sarulse/SampleCode/tree/master/public/app/controllers/products.js) 
-* App file to define the application at [public/app/app.js](https://github.com/sarulse/SampleCode/tree/master/public/app/app.js) 
-* Display data from the Rest API using Angular JS at [resources/views/index.php](https://github.com/sarulse/SampleCode/tree/master/resources/view/index.php) 
+* Controller at [public/app/controllers/products.js](https://github.com/sarulse/SampleCode/blob/master/public/app/controllers/products.js) 
+* App file to define the application at [public/app/app.js](https://github.com/sarulse/SampleCode/blob/master/public/app/app.js) 
+* Display data from the Rest API using Angular JS at [resources/views/index.php](https://github.com/sarulse/SampleCode/blob/master/resources/view/index.php) 
 
 ## Input Validation using Angular JS
 
