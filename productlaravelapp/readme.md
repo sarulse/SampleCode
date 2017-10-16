@@ -1,27 +1,32 @@
-# Laravel PHP Framework
+# A Simple Laravel Rest API APP with Angular JS
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Summary
+    List of products with details is displayed 
+    User can view a list of products
+    Select a product and edit/delete a product
+    User can also add a new product
+    A product will not be added to the database unless the required fields are filled
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Location of Laravel Files
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Model at app/Product.php
+Controller at app/Http/Products.php
+Database migrations at /database/migrations
+Routes at app/Http/routes.php
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Location of Angular Files
 
-## Contributing
+Controller at public/app/controllers/products.js
+App file to define the application at public/app/app.js
+Display data from the Rest API using Angular JS at resources/views/index.php
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Input Validation using Angular JS
 
-## Security Vulnerabilities
+ng-show is used to display error messages if the required field is not filled 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Location of the Snapshots
 
-## License
+Snapshots of the app with each CRUD operation is shown through SnaphotsOfLaravelApp.pdf
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
