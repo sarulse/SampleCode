@@ -1,5 +1,4 @@
 ## Sample “CakePHP ” project 
-**Required: CakePHP installation**
 
 ### Summary of the project
 	
