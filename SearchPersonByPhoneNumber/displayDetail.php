@@ -6,17 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.results').each(function(index) {
-            $(".showDetail"+index).hide(); 
-            $("#showResult"+index).click(function(){                        
-                 $(".showDetail"+index).toggle(); 
-                  return false;                
-            });
-        });
-    });
-</script>
+<script src = "js/showRecord.js"></script>
 <link rel="stylesheet" type="text/css" href="formstyle.css">
 </head>
 <body>
