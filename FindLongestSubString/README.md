@@ -2,6 +2,10 @@
 
 ## Find the starting position of the longest substring that contains the number of unique characters specified in the input.
 
+# File: #
+
+[findLongestSubString.php](https://github.com/sarulse/SampleCode/blob/master/FindLongestSubString/findLongestSubString.php)
+
 Input:
 --------
  1. string of characters (String) example:  dgfddsssdsfdffdfdfadfhheedsfdfcdfdxffdh
@@ -18,9 +22,9 @@ Input:
  
  **************************************************************************************************************
   ### For Testing:
-  Enter input from command line in the format php filename.php string number
-  (OR) 
-  uncomment input values for $string and $no_unique_chrs in the current php file: findLongestSubString file
+  Enter input from command line in the format: "php filename.php string number" <br/>
+  (OR) <br/>
+  uncomment input values for $string and $no_unique_chrs in the current php file: findLongestSubString.php
  ***************************************************************************************************************
 
 

@@ -1,8 +1,10 @@
 
 **Some Sample Codes in the following folders:**
 
-* FindLongestSubString  
+* [Laravel RestAPI App With AngularJS](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp/rEADME.md)
 
-* CakePHPMVCCodeWithJS 
+* [FindLongestSubString](https://github.com/sarulse/SampleCode/blob/master/FindLongestSubString/README.md)-Simple OOP program to find the longest substring starting point.
 
-Please click on each folder to see the code samples.
+* [CakePHP MVCCode With JS](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS/README.md) 
+
+__Please click on each folder/link to view the code samples.__
