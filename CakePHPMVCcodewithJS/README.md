@@ -7,7 +7,7 @@
 
 *	There are three sections in the form: Location, Industries and Statistics. 
 
-*	Either by clicking the section icon or title, the section drops down. 
+*	Either by selecting the section icon or title, the section drops down. 
 
 *	If the user did not enter the information on required fields, error message will be displayed to re-enter the values on the 	    form. This is done through jquery and JavaScript. 
 
