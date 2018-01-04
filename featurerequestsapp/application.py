@@ -1,13 +1,9 @@
 from flask import Flask, request, flash, url_for, redirect, render_template, abort, jsonify
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import and_
+from application import db
+from application.models import FeatureRequests
 
 app = Flask(__name__)
-app.config.from_pyfile('settings.cfg')
-db = SQLAlchemy(app)
 
-#After app is created import database Class Feature Requests
-from models import FeatureRequests
 
 @app.route("/")
 def hello():   
@@ -47,15 +43,6 @@ def add_request():
     try:
         matching_priority = False
         if request.method == 'POST':
-            print ("I am posting")
-            print (request.json['title'])
-            print(request.json['description'])
-            print (request.json['client_name'])
-            print (request.json['client_priority'])
-            print (request.json['target_date'])
-            print (request.json['product_area'])
-            client = request.json['client_name']
-            priority = request.json['client_priority']                     
             #Check if client has the same priority for other requests
             matching_priority =  check_client_priority(client,priority)
             if matching_priority:

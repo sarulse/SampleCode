@@ -1,4 +1,4 @@
-from app import db
+from application import db
 from sqlalchemy.dialects import mysql
 from sqlalchemy.dialects.mysql import TINYINT, LONGTEXT, VARCHAR, DATE, ENUM
 
