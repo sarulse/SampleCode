@@ -1,5 +1,5 @@
-from application import db
-from application.models import FeatureRequests
+from featureapp import db
+from featureapp.models import FeatureRequests
 
 db.create_all()
 

@@ -46,13 +46,14 @@ function RequestsViewModel() {
 	    contentType: 'application/json',
 	    type: 'POST',
 	    data: JSON.stringify({
-		'title': self.title(),
+		'title': self.title(),		
 		'description': self.description(),
 		'client_name': self.selectedClient(),
 		'client_priority': self.client_priority(),
 		'target_date': self.target_date(),
 		'product_area': self.selectedProductArea()
-	    }),	   
+	    }),
+	    
 	    success: function(data) {
 		console.log("Add to Requests list");
 		console.log("Printing feature requests");
@@ -72,6 +73,15 @@ function RequestsViewModel() {
 	    },  
 	    error: function() {		
 		//console.log("self.errors.length in Error "+ self.errors().length)
+		console.log("data");
+		console.log("self.title"+ self.title);
+		console.log("self.Description"+ self.description);
+		console.log("self.clientName"+ self.selectedClient);
+		console.log("self.priority"+ self.client_priority);
+		console.log("self.targetDate"+ self.target_date);
+		console.log("self.productArea"+ self.selectedProductArea);
+		
+		console.log("end");
 		if (self.errors().length > 0) {
 		    alert('Invalid inputs, please check your form values.');
 		    self.errors.showAllMessages();
