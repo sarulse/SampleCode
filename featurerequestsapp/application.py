@@ -3,29 +3,29 @@ from sqlalchemy import and_
 from featureapp import db
 from featureapp.models import FeatureRequests
 
-featureapp = Flask(__name__)
-featureapp.debug=True
+application = Flask(__name__)
+application.debug=True
 
 
-@featureapp.route("/")
+@application.route("/")
 def hello():   
     return "Hello pprld!"
 
-@featureapp.route("/showFeatureRequestForm")
+@application.route("/showFeatureRequestForm")
 def show_request_form():
     return render_template('add.html')
 
-@featureapp.route('/showAllFeatureRequests')
+@application.route('/showAllFeatureRequests')
 def show_all_requests():    
     return render_template('showAllRequests.html',feature_requests=FeatureRequests.query.order_by(FeatureRequests.id.desc()).all())
 
-@featureapp.route('/showEnteredRequest')
+@application.route('/showEnteredRequest')
 def show_last_inserted_requests():    
     return render_template('showLastEnteredRequest.html',
        last_feature_request=FeatureRequests.query.order_by(FeatureRequests.id.desc()).first()
     )
 #to check if client has entered same priority 
-@featureapp.route('/update/<cname>,<cpriority>')
+@application.route('/update/<cname>,<cpriority>')
 def check_client_priority(cname,cpriority):
     found_match_priority = False
     fr = FeatureRequests.query.filter(
@@ -39,7 +39,7 @@ def check_client_priority(cname,cpriority):
     return found_match_priority        
 
 
-@featureapp.route('/addFeatureRequests', methods=['GET', 'POST'])
+@application.route('/addFeatureRequests', methods=['GET', 'POST'])
 def add_request():
     try:
         matching_priority = False
@@ -81,4 +81,4 @@ def add_request():
         db.session.close()
 
 if __name__ == '__main__':
-    featureapp.run()
+    application.run()
