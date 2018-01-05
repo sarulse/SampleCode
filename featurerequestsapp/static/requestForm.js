@@ -1,23 +1,18 @@
-ko.validation.rules.pattern.message = 'Invalid.';
-
 ko.validation.init({
-    registerExtenders: true,
+    registerExtenders: false,
     messagesOnModified: true,
     insertMessages: true,
-    parseInputAttributes: true,    
+    parseInputAttributes: false,    
     messageTemplate: null
 }, true);
 
 function FeatureRequest(data) {
-    console.log("FeatureRequestData");
     this.id = ko.observable(data.id);
     this.title = ko.observable(data.title);
     this.description = ko.observable(data.description);
-    //this.clientList = ko.observableArray(data.clientList);
     this.client_name = ko.observable(data.selectedClient);
     this.client_priority = ko.observable(data.client_priority);
     this.target_date = ko.observable(data.target_date);
-    //this.productAreas = ko.observableArray(data.productAreas);
     this.product_area = ko.observable(data.selectedProductArea);
 }
 
@@ -55,9 +50,7 @@ function RequestsViewModel() {
 	    }),
 	    
 	    success: function(data) {
-		console.log("Add to Requests list");
-		console.log("Printing feature requests");
-		console.log(data['target_date']);
+		console.log("Adding feature requests");
 		self.requests.push(new FeatureRequest({
 		    title: data.title,
 		    description: data.description,
@@ -65,23 +58,12 @@ function RequestsViewModel() {
 		    client_priority: data.client_priority,
 		    target_date: data.target_date,		    
 		    product_area: data.product_area,
-		    id: data.id}));
-		
+		    id: data.id
+		}));		
 		window.location='/showEnteredRequest';		
-		return;	   
-		
+		return;	 		
 	    },  
 	    error: function() {		
-		//console.log("self.errors.length in Error "+ self.errors().length)
-		console.log("data");
-		console.log("self.title"+ self.title);
-		console.log("self.Description"+ self.description);
-		console.log("self.clientName"+ self.selectedClient);
-		console.log("self.priority"+ self.client_priority);
-		console.log("self.targetDate"+ self.target_date);
-		console.log("self.productArea"+ self.selectedProductArea);
-		
-		console.log("end");
 		if (self.errors().length > 0) {
 		    alert('Invalid inputs, please check your form values.');
 		    self.errors.showAllMessages();
@@ -100,8 +82,7 @@ function RequestsViewModel() {
 	self.errors.showAllMessages(false);
     };    
     
-}
-    
+}    
     
 ko.applyBindings(new RequestsViewModel());
 
