@@ -28,18 +28,18 @@
 
 	$ eb init
 * Select the settings for default region, application name, instance-name, python version-2.7, SSH set up optional.
-**	Example: Application name: ‘featurerequestsapp’
-	Instance name: pythonflaskrequestapp.us-east-1.elasticbeanstalk.com
+	** Example: Application name: ‘featurerequestsapp’
+		Instance name: pythonflaskrequestapp.us-east-1.elasticbeanstalk.com
 * Create environment for AWS Elastic beanstalk:
-	** Enter Envirorment name and DNS CNAME prefix
-	** DNS CNAME prefix is your app name For example: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.com/
-	*** Now the app wil be deployed and you will see messages about app version creation. Once the deployment is successful:
+	* Enter Envirorment name and DNS CNAME prefix
+	* DNS CNAME prefix is your app name For example: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.com/
+	* Now the app wil be deployed and you will see messages about app version creation. Once the deployment is successful:
 	(You will see the message: INFO: Successfully launched environment: pythonflaskrequestapp)
-*
 * Check out the app at http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.com/
-* For any file changes, example: config setting updtes for settings.py
-    ** Redeploy the app by
-    	    $ eb deploy
+* For any file changes, example: config setting updates for settings.py
+** Redeploy the app by
+
+	$ eb deploy
 	
 	  
 
