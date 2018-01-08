@@ -12,12 +12,12 @@
 	$ source flaskRequestApp-venv/bin/activate
 ### Insall the required packages and dependencies
 	$ pip install -r requirements.txt
-###	Create a MySQL database using AWS RDS if using AWS or create a mysql database 
-    At local, MYSQLWorkbench is helpful
-    RDS settings are saved at settings.py
+### Create a MySQL database using AWS RDS if using AWS or create a mysql database locally
+    * At local, MYSQLWorkbench is helpful
+    * RDS settings are saved at settings.py
 ### To test at local: 	
 	$ python application.py
-	can see the app at: http://127.0.0.01:5000/
+	View the app at http://127.0.0.01:5000/ (5000 is the default port at local)
     
     
 ### To test the app at AWS
@@ -34,7 +34,7 @@
 * Check out the app at http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.com/
 * For any file changes, example: config setting updtes for settings.py
     ** Redeploy the app by
-	    $ eb deploy
+    	    $ eb deploy
 	
 	  
 
