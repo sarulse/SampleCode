@@ -13,7 +13,7 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
 
 ### Get code fron GitHub
 *   git clone https://github.com/sarulse/SampleCode.git
-	* **featurerequests directory contains project files for the feature requests app, ignore the other directories**
+	* _**featurerequests directory** contains project files for the feature requests app, ignore the other directories_
 ### Create Virtual environment
 *   $ `cd featurerequestsapp`
 *	`$ virtualenv flaskRequestApp-venv`
