@@ -3,29 +3,33 @@ from sqlalchemy import and_
 from featureapp import db
 from featureapp.models import FeatureRequests
 
-featureapp = Flask(__name__)
-featureapp.debug=True
+application = Flask(__name__)
+application.debug=True
 
+#home page redirect to add request form
+@application.route("/")
+def main():
+    return redirect('/showFeatureRequestForm')
 
-@featureapp.route("/")
-def hello():   
-    return "Hello pprld!"
-
-@featureapp.route("/showFeatureRequestForm")
+#Create request form     
+@application.route("/showFeatureRequestForm")
 def show_request_form():
     return render_template('add.html')
 
-@featureapp.route('/showAllFeatureRequests')
+#Show all feature requests
+@application.route('/showAllFeatureRequests')
 def show_all_requests():    
     return render_template('showAllRequests.html',feature_requests=FeatureRequests.query.order_by(FeatureRequests.id.desc()).all())
 
-@featureapp.route('/showEnteredRequest')
+#Show last entered feature requess
+@application.route('/showEnteredRequest')
 def show_last_inserted_requests():    
     return render_template('showLastEnteredRequest.html',
        last_feature_request=FeatureRequests.query.order_by(FeatureRequests.id.desc()).first()
     )
-#to check if client has entered same priority 
-@featureapp.route('/update/<cname>,<cpriority>')
+
+#Function to check if client has entered same priority 
+@application.route('/update/<cname>,<cpriority>')
 def check_client_priority(cname,cpriority):
     found_match_priority = False
     fr = FeatureRequests.query.filter(
@@ -38,8 +42,8 @@ def check_client_priority(cname,cpriority):
         print ("Row Exist")
     return found_match_priority        
 
-
-@featureapp.route('/addFeatureRequests', methods=['GET', 'POST'])
+#Adding requests to DB
+@application.route('/addFeatureRequests', methods=['GET', 'POST'])
 def add_request():
     try:
         matching_priority = False
@@ -53,15 +57,14 @@ def add_request():
             if matching_priority:
                 freq = FeatureRequests.query.filter(FeatureRequests.client_name == client)
                 if (freq.count() > 0):
-                    #update priority
+                    #update priority order for the same client
                     for row in freq:                                        
                         row.client_priority += 1      
             #insert new requests            
             feature_requests = FeatureRequests(request.json['title'], request.json['description'], request.json['client_name'],            
                                                request.json['client_priority'], request.json['target_date'], request.json['product_area'])
             
-            #db.drop_all()
-            db.create_all()
+            
             db.session.add(feature_requests)
             db.session.commit()         
             
@@ -81,4 +84,5 @@ def add_request():
         db.session.close()
 
 if __name__ == '__main__':
-    featureapp.run()
+    db.create_all()
+    application.run()

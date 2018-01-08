@@ -4,7 +4,7 @@ from sqlalchemy.dialects.mysql import TINYINT, LONGTEXT, VARCHAR, DATE, ENUM
 
 import datetime
 
-
+#Creates requests table
 class FeatureRequests(db.Model):  
     __tablename__ = 'requests'
     id = db.Column('request_id', mysql.TINYINT, primary_key=True, autoincrement=True)
