@@ -1,8 +1,8 @@
-#Python Flask App with knockoutJS
+####Python Flask App with knockoutJS
 
 ##To run the application locally or through AWS, please follow the below instructions:
 
-### Get code fron GitHub
+## Get code fron GitHub
 *   git clone https://github.com/sarulse/SampleCode.git
 	featurerequests directory contains project files for the feature requests app, ignore the other directories
 ### Create Virtual environment
