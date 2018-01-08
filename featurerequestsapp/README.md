@@ -13,8 +13,8 @@
 ### Insall the required packages and dependencies
 	$ pip install -r requirements.txt
 ### Create a MySQL database using AWS RDS if using AWS or create a mysql database locally
-    * At local, MYSQLWorkbench is helpful
-    * RDS settings are saved at settings.py
+	* At local, MYSQLWorkbench is helpful
+	* RDS settings are saved at settings.py
 ### To test at local: 	
 	$ python application.py
 	View the app at http://127.0.0.01:5000/ (5000 is the default port at local)
@@ -22,8 +22,10 @@
     
 ### To test the app at AWS
 * Set up Elastic Beanstalk Environment
+
 	$ pip install awsebcli
 * With your AWS user account or through test user accounts at AWS IAM console
+
 	$ eb init
 * Select the settings for default region, application name, python version-2.7, SSH set up optional
 * Create environment for AWS Elastic beanstalk
