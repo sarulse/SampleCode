@@ -30,11 +30,10 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
     
     
 ### To test the app at AWS
-* Set up Elastic Beanstalk Environment
+* Set up Elastic Beanstalk Environment through awsebcli
 
 	`$ pip install awsebcli`
-* With your AWS user account or through test user accounts at AWS IAM console
-
+* Set up environment, app and python 
 	`$ eb init`
 * Select the settings for default region, application name, instance-name, python version-2.7, SSH set up optional.
 	* Example: Application name: ‘featurerequestsapp’'
