@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Showing Last Entered Feature Request</h2>  
+    <table class="table table-bordered" >
+      <tr>
+        <th>#
+        <th>Title
+        <th>Description
+        <th>Client Name
+        <th>Client Priority
+        <th>Target Date
+        <th>Produt Area</th>
+      
+      <tr class=title>
+        <td>{{ last_feature_request.id}}
+        <td>{{ last_feature_request.title }}
+        <td>{{ last_feature_request.description }}
+        <td>{{ last_feature_request.client_name }}
+        <td>{{ last_feature_request.client_priority }}        
+        <td>{{ last_feature_request.target_date.strftime('%Y-%m-%d') }}
+        <td>{{ last_feature_request.product_area }}       
+    </table>
+    <p>
+      <a class="btn btn-info" href="{{ url_for('show_request_form') }}"><b>Add New Request</b></a>
+    </p>
+    
+    <p>
+      <a class="btn btn-info" href="{{ url_for('show_all_requests') }}"><b>See all requests</b></a>
+    </p>    
+{% endblock %}
