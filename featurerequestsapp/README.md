@@ -24,7 +24,7 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
 	`$ pip install -r requirements.txt`
 ### Create a MySQL database using AWS RDS if using AWS or create a mysql database locally
 	* At local, MYSQLWorkbench is helpful
-	* RDS settings can be found at at settings.py
+	* Database settings can be found at at settings.py
 ### To test at local: 	
 
 	`$ python application.py`
