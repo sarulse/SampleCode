@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="container">
+            <p><h1>Create a feature request</h1></p>            
+            <form class="form-inline" action="/addFeatureRequests" method="post">
+            <div class="form-group" >
+                <p data-bind="css: { error: title.hasError }">
+                    Title: <input type="text" class="form-control" data-bind="value: title" valueUpdate: "afterkeydown" />
+                    <span data-bind='visible: title.hasError, text: title.validationMessage'> </span>
+                </p>                                  
+                <p>
+                    Description: <textarea class="form-control" rows="3" cols="50" data-bind="value: description"></textarea>
+                    <span data-bind='visible: description.hasError, text: description.validationMessage'> </span>
+                </p>
+                <p>
+                    Select Client:  <select size=3 class="form-control" data-bind="options: clientList, value: selectedClient"></select>
+                    <span data-bind='visible: clientList.hasError, text: clientList.validationMessage'> </span>
+                </p>
+                <p>
+                    Enter Client Priority: <input class="form-control" value="Enter a Number" data-bind="initializeValue: client_priority, value: client_priority" />
+                    <span data-bind='visible: client_priority.hasError, text: client_priority.validationMessage'> </span>
+                </p>
+                <p>
+                    Target Date: <input type="date" class="form-control"  data-bind="value: target_date">
+                    <span data-bind='visible: target_date.hasError, text: target_date.validationMessage'> </span>
+                </p>    
+                <p>
+                    Product area:  <select size=4 class="form-control" data-bind="options: productAreas, value: selectedProductArea"></select>
+                    <span data-bind='visible: productAreas.hasError, text: productAreas.validationMessage'> </span>
+                </p>
+                <p><button class="btn btn-default" data-bind="click: addFeatureRequest">Create Requests</button>
+                &nbsp;
+                <button class="btn btn-default" data-bind="click: reset">Reset</button>
+                </p>
+                
+            </div>
+  </div>
+ 
+  
+  <script src="{{ url_for('static', filename='requestFormCopy.js') }}"></script>
+  <!--<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+  <link rel="stylesheet" src="{{ url_for('static', filename='bootstrap.min.css') }}">
+   
+  -->
+  <style>
+          input.error {
+                    color: red;
+                    border-color: red;    
+          }        
+  </style>
+{% endblock %}

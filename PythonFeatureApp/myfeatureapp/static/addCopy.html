@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="container">
+            <p><h1>Create a feature request</h1></p>            
+            <form class="form-inline" action="/addFeatureRequests" method="post">
+                     <legend>User: <span data-bind='text: errors().length'></span> errors</legend>
+            <div class="form-group" >
+                <p>Title: <input type="text" class="form-control" data-bind="value: title"/></p>
+                <p>Description: <textarea class="form-control" rows="3" cols="50" data-bind="value: description"></textarea></p>
+                <p>Select Client:  <select size=3 class="form-control" data-bind="options: clientList, value: selectedClient"></select></p>
+                <p>Enter Client Priority: <input class="form-control" value="Enter a Number" data-bind="initializeValue: client_priority, value: client_priority" /></p>
+                <p>Target Date: <input type="date" class="form-control"  data-bind="value: target_date">
+                <p>Product area:  <select size=4 class="form-control" data-bind="options: productAreas, value: selectedProductArea"></select></p>
+                <p><button class="btn btn-default" data-bind="click: addFeatureRequest">Create Requests</button>
+                &nbsp;
+                <button class="btn btn-default" data-bind="click: reset">Reset</button>
+                </p>
+                
+            </div>
+  </div>
+ 
+  
+  <script src="{{ url_for('static', filename='requestForm.js') }}"></script>
+  <!--<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+  <link rel="stylesheet" src="{{ url_for('static', filename='bootstrap.min.css') }}">
+  -->
+  <style>
+          
+          
+          }
+  </style>
+{% endblock %}
