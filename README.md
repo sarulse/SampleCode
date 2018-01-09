@@ -1,12 +1,12 @@
 
 **Some Sample Codes in the following folders:**
 
-* [Laravel RestAPI App With AngularJS](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp)- A laravel REST API app with Angular JS
+* [Feature Requests APP](https://github.com/sarulse/SampleCode/tree/master/featurerequestsapp) - Python Flask app with sql_alchemy and KnockoutJS*
+
+* [Laravel RestAPI App With AngularJS](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp)- Laravel REST API app with Angular JS
+
+* [CakePHP MVCCode With JS](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS) -CakePHP app with JavaScript
 
 * [Find Longest SubString](https://github.com/sarulse/SampleCode/blob/master/FindLongestSubString)-An OOP program to find the longest substring starting position.
-
-* [Feature Requests APP](https://github.com/sarulse/SampleCode/tree/master/featurerequestsapp) - Python Flask app with sql_alchemy and KnockoutJS
-
-* [CakePHP MVCCode With JS](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS) - A CakePHP app with JavaScript
 
 __Please click on each folder/link to view the code samples.__
