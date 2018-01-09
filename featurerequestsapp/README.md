@@ -42,6 +42,7 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
 	* Example: Application name: ‘featurerequestsapp’'
 	* Instance name: pythonflaskrequestapp.us-east-1.elasticbeanstalk.com
 * Create environment for AWS Elastic beanstalk:
+
 	`$ eb create`
 	
 	* Enter Envirorment name and DNS CNAME prefix
@@ -51,7 +52,7 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
 	
 * Check out the app at http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.com/
 * For any file changes, example: config setting updates for settings.py
-	* Redeploy the app by
+	* Re-deploy the app by thecommand:
 	
 	`$ eb deploy`
 	
