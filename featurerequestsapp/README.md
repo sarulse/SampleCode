@@ -52,9 +52,11 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
 	
 * Check out the app at http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.com/
 * For any file changes, example: config setting updates for settings.py
-	* Re-deploy the app by thecommand:
+	* Re-deploy the app by the command:
 	
 	`$ eb deploy`
+* To de-activate the virtual environment (flaskRequestApp-venv) :
+	* `$ deactivate`
 	
 	  
 
