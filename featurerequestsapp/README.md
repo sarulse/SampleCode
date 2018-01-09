@@ -35,7 +35,8 @@ App can be viewed at: http://pythonflaskrequestapp.us-east-1.elasticbeanstalk.co
 * Set up Elastic Beanstalk Environment through awsebcli
 
 	`$ pip install awsebcli`
-* Set up environment, app and python 
+* Set up environment, app and python :
+
 	`$ eb init`
 * Select the settings for default region, application name, instance-name, python version-2.7, SSH set up optional.
 	* Example: Application name: ‘featurerequestsapp’'
