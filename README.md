@@ -1,7 +1,7 @@
 
 **Some Sample Codes in the following folders:**
 
-* [Feature Requests APP](https://github.com/sarulse/SampleCode/tree/master/featurerequestsapp) - Python Flask app with sql_alchemy and KnockoutJS*
+* [Feature Requests APP](https://github.com/sarulse/SampleCode/tree/master/featurerequestsapp) - AWS Python Flask app with sql_alchemy and KnockoutJS
 
 * [Laravel RestAPI App With AngularJS](https://github.com/sarulse/SampleCode/blob/master/productlaravelapp)- Laravel REST API app with Angular JS
 
