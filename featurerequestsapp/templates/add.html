@@ -1,9 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-    <div class="container">
-	<p><h1>Please fill out the form to create a feature request</h1></p>            
-	<form class="form-inline" action="/addFeatureRequests" method="post">
-	    <div class="form-group" >
+    <div class="container">          
+        <p>
+          <i>To view all the requests, select :</i>
+          <a class="btn btn-info" href="{{ url_for('show_all_requests') }}"><b>See all requests</b></a>
+        </p>    
+	<p><h3>Fill out the form to create a feature request</h3></p>            
+	<form class="well well-sm" action="/addFeatureRequests" method="post">
+	    <div class="form-group">
 	      <p>Title: <input type="text" class="form-control" data-bind="value: title"/></p>
 	      <p>Description: <textarea class="form-control" rows="3" cols="50" data-bind="value: description"></textarea></p>
 	      <p>Select Client:  <select size=3 class="form-control" data-bind="options: clientList, value: selectedClient"></select></p>
