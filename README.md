@@ -7,6 +7,5 @@
 
 * [CakePHP MVCCode With JS](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS) -CakePHP app with JavaScript
 
-* [Find Longest SubString](https://github.com/sarulse/SampleCode/blob/master/FindLongestSubString)-An OOP program to find the longest substring starting position.
 
 __Please click on each folder/link to view the code samples.__
