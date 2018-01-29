@@ -17,7 +17,7 @@ User interface:
 
 (2) testInput.csv : sample input file that can be downloaded from the link in the web page
 
-(2) SnapShotOfParsingResults.pdf : contain snapshots of the web page
+(3) SnapShotOfParsingResults.pdf : contain snapshots of the web page
 
 Other projects can be found at https://github.com/sarulse/SampleCode 
 
