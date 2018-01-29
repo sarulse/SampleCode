@@ -11,9 +11,9 @@ User interface:
     
 ### Code is Structured as follows: ###
 
-(1) fileupload.html : Contains the layout and JS scripts
+(1) fileupload.html : contains the layout and JS scripts
 
-(2) testInput.csv : Sample input file that can be downloaded from the link in the web page
+(2) testInput.csv : sample input file that can be downloaded from the link in the web page
 
 (2) SnapShotOfParsingResults.pdf : contain snapshots of the web page
 
