@@ -1,4 +1,4 @@
-Sample Code to demo Client Side parse of csv file using JavaScript
+Client Side parse of CSV file using JavaScript
 
     An user uploads the file.
 
