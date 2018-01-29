@@ -2,11 +2,13 @@
 
 User interface:
 
-    An user uploads the file.
+    An user uploads the file
 
     The file is of the format: Name, Position, Office, Age.
 
-    Once JavaScript parses the csv file, the results are displayed in a html table format.
+    JavaScript is used to parse the csv file.
+    
+    The results are displayed in a html table format.
 
     
 ### Code is Structured as follows: ###
