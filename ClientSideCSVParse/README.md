@@ -1,4 +1,4 @@
-##Client Side parse of CSV file using JavaScript##
+## Client Side parse of CSV file using JavaScript ##
 
     An user uploads the file.
 
@@ -7,7 +7,7 @@
     Once JavaScript parses the csv file, the results are displayed in a html table format.
 
     
-###Code is Structured as follows:###
+### Code is Structured as follows: ###
 
 (1) fileupload.html : Contains the layout and JS scripts
 
