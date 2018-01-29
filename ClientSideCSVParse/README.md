@@ -1,5 +1,7 @@
 ## Client Side parse of CSV file using JavaScript ##
 
+User interface:
+
     An user uploads the file.
 
     The file is of the format: Name, Position, Office, Age.
