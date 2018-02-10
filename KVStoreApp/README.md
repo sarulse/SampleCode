@@ -14,6 +14,7 @@ App can be viewed at http://www.sarulsel.us/KVStoreApp/
 
 ## To run the application locally
 *   git clone https://github.com/sarulse/SampleCode.git
+
     Required folder: "KStoreApp" hence other folders can be ignored by sparse checkout and shallow clone.
 *   Once you have the folder KVStoreApp in your local
 *   cd into the directory
