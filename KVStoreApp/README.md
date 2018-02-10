@@ -16,9 +16,8 @@ App can be viewed at http://www.sarulsel.us/KVStoreApp/
 *   git clone https://github.com/sarulse/SampleCode.git
 
     Required folder: "KStoreApp" hence other folders can be ignored by sparse checkout and shallow clone.
-*   Once you have the folder KVStoreApp in your local
-*   cd into the directory
-    `cd KVSToreApp`
+*   Once you have the folder: "KVStoreApp" in your local, cd into the directory
+*    `cd KVSToreApp`
 *   Then at command prompt: `$ php -S localhost:8080`
 
     View the app at http://localhost:8080 
