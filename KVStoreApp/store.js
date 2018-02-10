@@ -2,18 +2,16 @@ $(document).ready(function(){
                 
     $("#buttonToggle").hide();
     // To store key value Data
-    $("#storeData").html('');   
-                    
+    $("#storeData").html('');                       
     //To autocomplete key names
     $(".auto").autocomplete({                    
             source: "kvStore.php",
             minLength: 1                                         
-    });
-                 
+    });                 
     // Variable to hold ajaxRequest
     var ajaxRequest;
                                                 
-    //To display value of key in the value field              
+    //To display matching value of key in the value field              
     $('#keyName').change(function() {
         var key_name =  $('#keyName').val();
         console.log("Iam in change");
@@ -42,11 +40,9 @@ $(document).ready(function(){
         }                    
         var $form = $(this);                
         var $inputs = $form.find("input");
-        var serializedData = $form.serialize();
-    
+        var serializedData = $form.serialize();    
         // Disable the inputs for the duration of the Ajax ajaxRequest.
-        $inputs.prop("disabled", true);
-    
+        $inputs.prop("disabled", true);    
         // Fire off the ajaxRequest to /kvStore.php
         ajaxRequest = $.ajax({
             url: "/kvStore.php",
