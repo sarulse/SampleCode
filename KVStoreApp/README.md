@@ -10,14 +10,19 @@ Languages: PHP, HTML, jquery, Ajax, bootsrap
     
 
 ## To run the application locally
-*   git clone https://github.com/sarulse/SampleCode/KVStoreApp.git
-*   At command prompt: `$ php -S localhost:8080`
+*   git clone https://github.com/sarulse/SampleCode.git
+    Required folder: "KStoreApp" hence other folders can be ignored by sparse checkout and shallow clone.
+*   Once you have the folder KVStoreApp in your local
+*   cd into the directory
+    `cd KVSToreApp`
+*   Then at command prompt: `$ php -S localhost:8080`
     View the app at http://localhost:8080 
 
     
-### Use:
+### Use cases:
     * Enter data for key and value field through the frontend
     * The key field will show a list of existing key names if atleast one character is entered
+    * The value field will auto populate with the key selected from the list
     * Update key value through the value field
     * To view the Key Value Store: Toggle the button: 'Click here to view/hide the Key Value Store'
     
