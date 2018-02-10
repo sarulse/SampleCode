@@ -1,9 +1,10 @@
 # Sample Key Value Store
-App can be viewed at http://www.sarulsel.us/KVStoreApp/
-
 Purpose: To build a Key Value Store that is transient.
 
 Languages: PHP, HTML, jquery, Ajax, bootsrap
+App can be viewed at http://www.sarulsel.us/KVStoreApp/
+
+
 
 ## Summary
     * Created a key-value store backend, with a 'get(key)' operation and a 'set(key, value)' operation.
