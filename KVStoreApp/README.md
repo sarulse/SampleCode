@@ -1,7 +1,8 @@
-# Sample Key Value Store
+# Key Value Store
 Purpose: To build a Key Value Store that is transient.
 
 Languages: PHP, HTML, jquery, Ajax, bootsrap
+
 App can be viewed at http://www.sarulsel.us/KVStoreApp/
 
 
