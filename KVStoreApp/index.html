@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Sample KV Store App</title>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">        
+    </head>
+    <body>
+        <div>         
+                <h2>Create KV Store</h2>
+                <form method="post" id="kvform" class="well well-sm" >
+                    <div class="form-group">   
+                        <p>Key: <input type="text" name="keyName" id="keyName" class="form-control auto" placeholder="Enter key"  autocomplete="off" required> </p>
+                        <p>Value: <input type="text" name="valueName" id="value" class="form-control valueReceived" placeholder="Enter value"autocomplete="off" required> </p>
+                        <p>
+                            <div>
+                                <ul>
+                                    <li>If there is no matching value in the store for the key entered : the value field is empty.</li>
+                                    <li>If there is matching value, it's displayed in the value field after selecting the key.</li>
+                                </ul>
+                            </div>
+                        </p>
+                        <p><input type="submit" id="send" value="Create"></p>                                            
+                    </div>                    
+                </form>
+                <button id="buttonToggle" class="text-center">Click here to view/hide the Key Value Store</button>
+                <div id="storeData" class="text-center" ></div>
+        </div> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="/store.js"></script>             
+    </body>
+</html>
+
+
+
+
+
+
