@@ -1,7 +1,8 @@
 # Sample Key Value Store
 App can be viewed at http://www.sarulsel.us/KVStoreApp/
 
-Purpose: To build a Key Value Store that is transient
+Purpose: To build a Key Value Store that is transient.
+
 Languages: PHP, HTML, jquery, Ajax, bootsrap
 
 ## Summary
@@ -16,6 +17,7 @@ Languages: PHP, HTML, jquery, Ajax, bootsrap
 *   cd into the directory
     `cd KVSToreApp`
 *   Then at command prompt: `$ php -S localhost:8080`
+
     View the app at http://localhost:8080 
 
     
