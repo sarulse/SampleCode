@@ -8,7 +8,6 @@
                 
         public function setKey($keyName, $valueName){
             $_SESSION[$keyName] = $valueName;
-            
         }
         
         public function getkey($keyName){
