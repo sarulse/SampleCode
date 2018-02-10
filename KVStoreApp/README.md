@@ -24,10 +24,10 @@ App can be viewed at http://www.sarulsel.us/KVStoreApp/
 
     
 ### Use cases:
-    * Enter data for key and value field through the frontend
-    * The key field will show a list of existing key names if atleast one character is entered
-    * The value field will auto populate with the key selected from the list
-    * Update key value through the value field
+    * Enter data for key and value field through the form.
+    * The key field will show a list of existing key names if atleast one character is entered.
+    * The value field will auto populate with the key selected from the list.
+    * Update key value through the value field.
     * To view the Key Value Store: Toggle the button: 'Click here to view/hide the Key Value Store'
     
 
