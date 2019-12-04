@@ -1,4 +1,4 @@
-## Client Side parse of CSV file using JavaScript ##
+## Client Side parse of CSV file using JavaScript and Papaparse.js ##
 
 User interface:
 
