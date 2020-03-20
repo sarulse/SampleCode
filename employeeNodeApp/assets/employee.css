@@ -1,0 +1,12 @@
+#employeeForm {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 14px;
+    background: #ececec;
+}
+
+.home {
+    top: 0;
+    right: 0;
+    position: absolute;
+}

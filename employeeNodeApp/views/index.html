@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Employee List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+  <style rel=" stylesheet" src="../static/employee.css"></style>
+</head>
+
+<body>
+
+  <div classs="col-md-2 col-md-offset-2" align="right">
+    <button type="button" class="btn btn-primary" id="add">Add Employee</button>
+  </div>
+  <div class="container">
+    <p>
+      <h1 class="text-center">Employee List</h1>
+    </p>
+    <table class="table table-bordered table-striped table-responsive-sm" id="employee-table">
+      <thead>
+        <tr>
+          <th scope="col">Employee ID</th>
+          <th scope="col">Employee First Name</th>
+          <th scope="col">Employee Last Name</th>
+          <th scope="col">Employee Hire Date</th>
+          <th scope="col">Employee Role</th>
+          <th scope="col">Employee Quote</th>
+          <th scope="col">Employee Joke</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="results text-center"></div>
+  <br><br>
+
+  <div class="text-center" id="empForm">
+
+    <form id="employeeForm" class=" modal form-horizontal" method="post" action="" role="form"
+      enctype="application/x-www-form-urlencoded">
+      <p class="text-center">
+        <h1>Employee Form</h1>
+      </p>
+      <fieldset>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Employee First Name: </label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" id="first-name" name="fname" pattern="[A-Za-z]{1,}"
+              title="Employee First name can contain only alphabets" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Employee Last Name: </label>
+          <div class="col-sm-2">
+            <input class="form-control" type="text" id="last-name" name="lname" pattern="[A-Za-z]{1,}"
+              title="Employee Last name can contain only alphabets" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Employee Hire Date: </label>
+          <div class="col-sm-2">
+            <input class="form-control datepicker" type="text" id="hire-date" name="hdate"
+              title="Hire Date should be of the format-YYYY-MM-DD" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Employee Role: </label>
+          <div class="col-sm-5">
+            <label class="radio-inline"><input type="radio" name="role" value="CEO" required>CEO</label>
+            <label class="radio-inline"><input type="radio" name="role" value="VP" required>VP</label>
+            <label class="radio-inline"><input type="radio" name="role" value="Manager" readonly>Manager</label>
+            <label class="radio-inline"><input type="radio" name="role" value="LACKEY" required>LACKEY</label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="text-center">
+        <button type="submit" class="btn btn-default sm center-block">add</button>
+      </div>
+      <div classs="col-md-2 col-md-offset-2">
+        <button type="button" class="btn btn-primary home" id="home"
+          onclick="parent.location='http://localhost:3000/public/index.html'">Home</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../static/index.js"></script>
+
+</body>
+
+</html>

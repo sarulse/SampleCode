@@ -1,0 +1,22 @@
+{
+  "name": "employeeapp",
+  "version": "1.0.0",
+  "description": "Employee App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon app.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "~4.16.4",
+    "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
+    "request": "^2.88.2",
+    "uniqid": "^5.2.0"
+  },
+  "author": "sarulsel",
+  "license": "ISC",
+  "devDependencies": {}
+}
