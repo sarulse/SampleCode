@@ -24,7 +24,6 @@ $(document).ready(function () {
     var serializedData = form.serialize();
     var data = serializedData;
 
-    console.log('Form data is: ' + serializedData);
     // Post employees
     $.post("/api/employees", data,
         function (data) {
@@ -39,7 +38,7 @@ $(document).ready(function () {
       });
   });
 
-  //Get employees
+  // Get employees
   $.get("/api/employees",
       function (data) {
         console.log('Getting data:');
@@ -50,6 +49,7 @@ $(document).ready(function () {
     .fail(function (jqXHR, status, errorThrown) {
       console.log(" Error getting employee list: " + status, errorThrown);
     });
+
   // Get By ID
   $(document).on('click', '#getByID', function () {
     console.log("Get By ID button is triggered");
@@ -90,18 +90,17 @@ $(document).ready(function () {
       quote: empQuote,
       joke: empJoke
     }
-    console.log("Employee ID:" + empID);
     $.ajax({
         url: "/api/employees/" + empID,
         type: "PUT",
         datatype: "application/json",
         data: updated_employee,
         success(data) {
-          console.log('Updating employee data using ID:');
-          console.log(data.empID);
-          $(".results").html(`<h3>Updating employee by ID is successful. The updated information is as follows:</h3>\
-          Employee: \ 
-          Name: ${data.fname} ${data.lname}, Hire Date: ${data.hdate}, Role:  ${data.role}`);
+          console.log('Updated employee data using ID:' + data.emp.empID);
+          display_employee_list(data.emp_list);
+          $(".results").html(`<h3>Updating employee is successful. The updated information is as follows:</h3> \
+        Employee: \ 
+        Name: ${data.emp.fname} ${data.emp.lname}, Hire Date: ${data.emp.hdate}, Role:  ${data.emp.role}`);
         }
       })
       .fail(function (jqXHR, status, errorThrown) {
@@ -110,23 +109,30 @@ $(document).ready(function () {
       });
   });
 
-  //Delete employee by ID  
+
+  // Delete employee by ID  
   $(document).on('click', '#deleteByID', function () {
     console.log("Delete By ID button is triggered");
     let empID = $(this).closest('td').siblings('#empNo').text()
     console.log("Employee ID:" + empID);
-    $.get("/api/employees/" + empID,
-        function (data) {
+    $.ajax({
+        url: "/api/employees/" + empID,
+        type: "DELETE",
+        datatype: "application/json",
+        success(data) {
           console.log('Deleting employee data using ID:');
-          console.log(data.empID);
+          console.log(data.emp.empID);
+          display_employee_list(data.emp_list);
           $(".results").html(`<h3>Deleting employee is successful, following employee is deleted</h3> \
-      Employee: \ 
-      Name: ${data.fname} ${data.lname}, Hire Date: ${data.hdate}, Role:  ${data.role}`);
-        })
+        Employee: \ 
+        Name: ${data.emp.fname} ${data.emp.lname}, Hire Date: ${data.emp.hdate}, Role:  ${data.emp.role}`);
+        }
+      })
       .fail(function (jqXHR, status, errorThrown) {
         $(".getID_results").append("employee isn't deleted");
         console.log(" Error deleting employee by ID: " + status, errorThrown);
       });
+
   });
 
   // To display employee data
@@ -141,7 +147,7 @@ $(document).ready(function () {
     $("#empJoke").append(value.joke + "</br></br>");
   }
 
-  // To display employee data
+  // To display employee-list data
   function display_employee_list(employees) {
     console.log("Displaying employees data");
     var tbody = $('table tbody');
