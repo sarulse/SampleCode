@@ -7,7 +7,7 @@ router.get('/', employee_controller.get_employees);
 
 router.get('/:id', employee_controller.get_ByID);
 
-router.put('/:id', employee_controller.update_ByID);
+router.put('/:id', employee_controller.validate('update_employee'), employee_controller.update_ByID);
 
 router.delete('/:id', employee_controller.delete_ByID);
 

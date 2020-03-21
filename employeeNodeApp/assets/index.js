@@ -69,17 +69,17 @@ $(document).ready(function () {
       });
   });
 
-  //Update employee by ID  
+  // Update employee by ID  
   $(document).on('click', '#updateByID', function () {
     console.log("Update By ID button is triggered");
 
-    let empID = $(this).closest('td').siblings('#empNo').text();
-    let empFName = $(this).closest('td').siblings('#empFName').text();
-    let empLName = $(this).closest('td').siblings('#empLName').text();
-    let empHDate = $(this).closest('td').siblings('#empHDate').text();
+    let empID = $.trim($(this).closest('td').siblings('#empNo').text());
+    let empFName = $.trim($(this).closest('td').siblings('#empFName').text());
+    let empLName = $.trim($(this).closest('td').siblings('#empLName').text());
+    let empHDate = $.trim($(this).closest('td').siblings('#empHDate').text());
     let empRole = "VP";
-    let empQuote = $(this).closest('td').siblings('#empQuote').text();
-    let empJoke = $(this).closest('td').siblings('#empJoke').text();
+    let empQuote = $.trim($(this).closest('td').siblings('#empQuote').text());
+    let empJoke = $.trim($(this).closest('td').siblings('#empJoke').text());
 
     let updated_employee = {
       empID: empID,
@@ -90,6 +90,9 @@ $(document).ready(function () {
       quote: empQuote,
       joke: empJoke
     }
+
+    console.log("updated employee");
+    console.log(updated_employee);
     $.ajax({
         url: "/api/employees/" + empID,
         type: "PUT",

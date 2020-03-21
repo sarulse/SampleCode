@@ -59,7 +59,8 @@ exports.validDate = () => {
 // To validate form data
 exports.validate = (method) => {
     switch (method) {
-        case 'create_employee': {
+        case 'create_employee':
+        case 'update_employee': {
             return [
                 check('fname', 'Employee First name is alphabetic only and should contain atleast 2 characters').exists().isAlpha().isLength({
                     min: 2
@@ -98,6 +99,7 @@ exports.get_ByID = function (req, res) {
 exports.update_ByID = async function (req, res) {
     try {
         const validation_res = validationResult(req);
+
         if (!validation_res.isEmpty()) {
             console.log('Error validating updated employee data');
             res.status(422).json({
@@ -107,9 +109,7 @@ exports.update_ByID = async function (req, res) {
         } else {
             let updated_emp = req.body;
             console.log("updating employee with ID:" + req.params.id);
-            console.log(updated_emp);
             const employee = employees.find(emp => emp.empID === req.params.id);
-            console.log(employee);
             let index_emp = employees.indexOf(employee);
             console.log("Index of employee: " + index_emp);
             if (employee) {
