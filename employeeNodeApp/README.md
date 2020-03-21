@@ -1,7 +1,6 @@
 # Node JS App with Express Js
 
 ### Tech Stack:
-*	OS: Windows
 *	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax, Bootstrap
 *	Framework - Express Js
 
