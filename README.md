@@ -1,5 +1,6 @@
 
 **Some Sample Codes in the following folders:**
+* [Rest API with Node Js, Ajax, Jquery and Bootstrap](https://github.com/sarulse/SampleCode/tree/master/employeeNodeApp) - Node Js App with Ajax, Jquery and Bootstrap
 
 * [Feature Requests APP](https://github.com/sarulse/SampleCode/tree/master/featurerequestsapp) - AWS Python Flask app with sql_alchemy and KnockoutJS
 
@@ -7,7 +8,7 @@
 
 * [CakePHP MVCCode With JS](https://github.com/sarulse/SampleCode/blob/master/CakePHPMVCcodewithJS) -CakePHP app with JavaScript
 
-* [Node Js App with Ajax, Jquery and Bootstrap](https://github.com/sarulse/SampleCode/tree/master/employeeNodeApp) - Node Js App with Ajax, Jquery and Bootstrap
+
 
 
 __Please click on each folder/link to view the code samples.__
