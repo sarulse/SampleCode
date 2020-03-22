@@ -7,10 +7,10 @@
 
 
 ### APP UI: http://localhost:3000/public/index.html
-- Through the UI, an user can add/update/get/delete a employee record
-- Once the information is updated, it will be posted as info messages on top of the page
-- Further the employee list also shows the updated info of each employee
-- Redis-caching mechanism was used to fetch an existing employee record
+- Through the UI, an user can add/update/get/delete a employee record.
+- Once the information is updated, it will be posted as info messages on top of the page.
+- Further the employee list also shows the updated info of each employee without reloading the page.
+- Redis-caching mechanism was used to fetch an existing employee record.
 
 
 ## Implemented End points
