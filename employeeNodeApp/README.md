@@ -1,4 +1,5 @@
 # Node JS App with Express Js
+- A Node Js CRUD app was implemented using Express Js.
 
 ### Tech Stack:
 *	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax, Bootstrap
@@ -6,7 +7,9 @@
 
 
 ### APP UI: http://localhost:3000/public/index.html
-
+- Through the UI, an user can add/update/get/delete a employee record
+- Once the information is updated, it will be posted as info messages on top of the page
+- Further the employee list also shows the updated info of each employee
 
 
 ## Implemented End points
