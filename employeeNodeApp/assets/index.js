@@ -72,44 +72,54 @@ $(document).ready(function () {
   // Update employee by ID  
   $(document).on('click', '#updateByID', function () {
     console.log("Update By ID button is triggered");
+    $(this).closest('td').siblings('#empFName').html('<input type="text"  value="">');
+    $(this).closest('td').siblings('#empLName').html('<input type="text" value="">');
+    $(this).closest('td').siblings('#empHDate').html('\
+      <input type="text" value=""><br/><br/>\
+      <div class="text-center">\
+        <button type="submit" class="center-block btn btn-primary" id="update">Click here to Update Employee</button> \
+      </div>\
+      ');
+    $(this).closest('td').siblings('#empRole').html('<input type="text" value="">');
 
-    let empID = $.trim($(this).closest('td').siblings('#empNo').text());
-    let empFName = $.trim($(this).closest('td').siblings('#empFName').text());
-    let empLName = $.trim($(this).closest('td').siblings('#empLName').text());
-    let empHDate = $.trim($(this).closest('td').siblings('#empHDate').text());
-    let empRole = "VP";
-    let empQuote = $.trim($(this).closest('td').siblings('#empQuote').text());
-    let empJoke = $.trim($(this).closest('td').siblings('#empJoke').text());
-
-    let updated_employee = {
-      empID: empID,
-      fname: empFName,
-      lname: empLName,
-      hdate: empHDate,
-      role: empRole,
-      quote: empQuote,
-      joke: empJoke
-    }
-
-    console.log("updated employee");
-    console.log(updated_employee);
-    $.ajax({
-        url: "/api/employees/" + empID,
-        type: "PUT",
-        datatype: "application/json",
-        data: updated_employee,
-        success(data) {
-          console.log('Updated employee data using ID:' + data.emp.empID);
-          display_employee_list(data.emp_list);
-          $(".results").html(`<h3>Updating employee is successful. The updated information is as follows:</h3> \
-        Employee: \ 
-        Name: ${data.emp.fname} ${data.emp.lname}, Hire Date: ${data.emp.hdate}, Role:  ${data.emp.role}`);
-        }
-      })
-      .fail(function (jqXHR, status, errorThrown) {
-        $(".getID_results").append("employee isn't updated");
-        console.log(" Error updating employee by ID: " + status, errorThrown);
+    $(document).on('click', '#update', function () {
+      console.log('Update button is clicked');
+      event.preventDefault();
+      var inputValues = [];
+      $('input').each(function (index) {
+        inputValues[index] = $(this).val();
       });
+      let empID = $.trim($(this).closest('td').siblings('#empNo').text());
+      let empQuote = $.trim($(this).closest('td').siblings('#empQuote').text());
+      let empJoke = $.trim($(this).closest('td').siblings('#empJoke').text());
+      let updated_employee = {
+        empID: empID,
+        fname: inputValues[0],
+        lname: inputValues[1],
+        hdate: inputValues[2],
+        role: inputValues[3],
+        quote: empQuote,
+        joke: empJoke
+      }
+      console.log("Employee ID:" + empID);
+      $.ajax({
+          url: "/api/employees/" + empID,
+          type: "PUT",
+          datatype: "application/json",
+          data: updated_employee,
+          success(data) {
+            console.log('Updated employee data using ID:' + data.emp.empID);
+            display_employee_list(data.emp_list);
+            $(".results").html(`<h3>Updating employee is successful. The updated information is as follows:</h3> \
+          Employee: \ 
+          Name: ${data.emp.fname} ${data.emp.lname}, Hire Date: ${data.emp.hdate}, Role:  ${data.emp.role}`);
+          }
+        })
+        .fail(function (jqXHR, status, errorThrown) {
+          $(".getID_results").append("employee isn't updated");
+          console.log(" Error updating employee by ID: " + status, errorThrown);
+        });
+    });
   });
 
 
