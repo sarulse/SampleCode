@@ -142,7 +142,7 @@ $(document).ready(function () {
           console.log('Deleting employee data using ID:');
           console.log(data.emp.empID);
           display_employee_list(data.emp_list);
-          $(".results").html(`<h3>Deleting employee is successful, following employee is deleted</h3> \
+          $(".results").html(`<h3>Deleting employee is successful, following employee is deleted:</h3> \
         Employee: \ 
         Name: ${data.emp.fname} ${data.emp.lname}, Hire Date: ${data.emp.hdate}, Role:  ${data.emp.role}`);
         }
