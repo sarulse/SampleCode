@@ -52,12 +52,12 @@ $(document).ready(function () {
   // Get By ID
   $(document).on('click', '#getByID', function () {
     console.log("Get By ID button is triggered");
-    let empID = $(this).closest('td').siblings('#empNo').text()
+    let empID = $(this).closest('td').siblings('#empNo').text();
     console.log("Employee ID:" + empID);
     $.get("/api/employees/" + empID,
         function (data) {
           console.log('Getting employee data using ID:');
-          console.log(data.empID);
+          console.log(empID);
           $(".results").html(`<h3>Get employee By ID is successful, following employee is found:</h3>\
       Employee: \
           Name: ${data.fname} ${data.lname}, Hire Date: ${data.hdate}, Role:  ${data.role}`);
@@ -71,15 +71,23 @@ $(document).ready(function () {
   // Update employee by ID  
   $(document).on('click', '#updateByID', function () {
     console.log("Update By ID button is triggered");
-    $(this).closest('td').siblings('#empFName').append('<input type="text"  value="">');
-    $(this).closest('td').siblings('#empLName').append('<input type="text" value="">');
+
+    let prev_fname = $.trim($(this).closest('td').siblings('#empFName').text());
+    let prev_lname = $.trim($(this).closest('td').siblings('#empLName').text());
+    let prev_hdate = $.trim($(this).closest('td').siblings('#empHDate').text());
+    let prev_role = $.trim($(this).closest('td').siblings('#empRole').text());
+
+    $(this).closest('td').siblings('#empFName').append('<input type="text"  value="' + prev_fname + '">');
+    $(this).closest('td').siblings('#empLName').append('<input type="text" value="' + prev_lname + '">');
     $(this).closest('td').siblings('#empHDate').append('\
-      <input type="text" value=""><br/><br/>\
+      <input type="text" value="' +
+      prev_hdate + '"><br/><br/>\
       <div class="text-center">\
         <button type="submit" class="center-block btn btn-primary" id="update">Click here to Update Employee</button> \
       </div>\
       ');
-    $(this).closest('td').siblings('#empRole').append('<input type="text" value="">');
+    $(this).closest('td').siblings('#empRole').append('<input type="text" value="' + prev_role +
+      '">');
 
     $(document).on('click', '#update', function () {
       console.log('Update button is clicked');
