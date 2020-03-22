@@ -2,8 +2,8 @@
 - A Node Js CRUD app was implemented using Express Js.
 
 ### Tech Stack:
-*	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax, Bootstrap
-*	Framework - Express Js
+*	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax
+*	Framework - Express Js, Bootstrap
 
 
 ### APP UI: http://localhost:3000/public/index.html
