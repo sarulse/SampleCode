@@ -72,15 +72,15 @@ $(document).ready(function () {
   // Update employee by ID  
   $(document).on('click', '#updateByID', function () {
     console.log("Update By ID button is triggered");
-    $(this).closest('td').siblings('#empFName').html('<input type="text"  value="">');
-    $(this).closest('td').siblings('#empLName').html('<input type="text" value="">');
-    $(this).closest('td').siblings('#empHDate').html('\
+    $(this).closest('td').siblings('#empFName').append('<input type="text"  value="">');
+    $(this).closest('td').siblings('#empLName').append('<input type="text" value="">');
+    $(this).closest('td').siblings('#empHDate').append('\
       <input type="text" value=""><br/><br/>\
       <div class="text-center">\
         <button type="submit" class="center-block btn btn-primary" id="update">Click here to Update Employee</button> \
       </div>\
       ');
-    $(this).closest('td').siblings('#empRole').html('<input type="text" value="">');
+    $(this).closest('td').siblings('#empRole').append('<input type="text" value="">');
 
     $(document).on('click', '#update', function () {
       console.log('Update button is clicked');
@@ -121,7 +121,6 @@ $(document).ready(function () {
         });
     });
   });
-
 
   // Delete employee by ID  
   $(document).on('click', '#deleteByID', function () {
@@ -176,9 +175,15 @@ $(document).ready(function () {
           <td  id="empQuote">' + employee.quote + '</td>\
           <td  id="empJoke">' + employee.joke + '</td>\
           <td>\
-            <button type="button" class="btn btn-primary" id="getByID">Get Employee By ID</button><br><br>\
-            <button type="button" class="btn btn-primary" id="updateByID">Update Employee By ID</button><br><br>\
-            <button type="button" class="btn btn-primary" id="deleteByID">Delete Employee BY ID</button><br><br>\
+            <div class="dropdown"> \
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Actions \
+            <span class="caret"></span></button> \
+            <ul class="dropdown-menu"> \
+              <li><button type="button" class="btn btn-primary" id="getByID">Get Employee By ID</button></li>\
+              <li><button type="button" class="btn btn-primary" id="updateByID">Update Employee By ID</button></li>\
+              <li><button type="button" class="btn btn-primary" id="deleteByID">Delete Employee BY ID</button></li>\
+            </ul> \
+            </div> \
           </td>\
         </tr>\
       ');
