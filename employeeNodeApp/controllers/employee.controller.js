@@ -9,9 +9,7 @@ const {
     validationResult
 } = require('express-validator');
 
-exports.test = function (req, res) {
-    res.send('Greetings from the Test controller!');
-};
+
 const axiosConfig = {
     headers: {
         'Content-Type': 'application/json;charset=UTF-8',
@@ -19,6 +17,19 @@ const axiosConfig = {
     }
 };
 exports.axiosConfig = axiosConfig;
+
+// using redis cache
+var redis = require('redis'),
+    client = redis.createClient(6379);
+
+client.on('error', function (err) {
+    console.log('Error ' + err);
+});
+
+
+exports.test = function (req, res) {
+    res.send('Greetings from the Test controller!');
+};
 
 // To validate hire date
 exports.validDate = () => {
@@ -49,6 +60,7 @@ exports.validate = (method) => {
     }
 }
 
+
 exports.get_employees = async function (req, res, next) {
     try {
         console.log("Getting employee list");
@@ -59,12 +71,24 @@ exports.get_employees = async function (req, res, next) {
 
 }
 
-exports.get_ByID = function (req, res) {
+exports.get_ByID = async function (req, res) {
+    console.log("Getting employee By ID: " + req.params.id);
+    const emp_id = "empId:" + req.params.id;
     try {
-        console.log("Getting employee By ID: " + req.params.id);
-        const employee = employees.find(emp => emp.empID === req.params.id);
-        if (employee) res.send(employee)
-        else res.status(404).send('The employee with the given ID was not found');
+        // Checking employee ID in cache
+        return client.get(emp_id, (err, result) => {
+            if (result) {
+                console.log("key found:" + emp_id);
+                res.send(result);
+            } else {
+                console.log("key not found");
+                const employee = employees.find(emp => emp.empID === req.params.id);
+                client.setex(emp_id, 3600, JSON.stringify(employee));
+                console.log(employee);
+                if (employee) res.send(employee)
+                else res.status(404).send('The employee with the given ID was not found');
+            }
+        });
     } catch (err) {
         return ("Error getting employee by ID from data" + err);
     }

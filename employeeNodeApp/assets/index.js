@@ -44,7 +44,6 @@ $(document).ready(function () {
         console.log('Getting data:');
         console.log(data);
         display_employee_list(data);
-
       })
     .fail(function (jqXHR, status, errorThrown) {
       console.log(" Error getting employee list: " + status, errorThrown);
