@@ -1,5 +1,5 @@
 # Node JS App with Express Js
-- A Node Js CRUD app was implemented using Express Js.
+- A Node Js REST API CRUD app was implemented using Express Js.
 
 ### Tech Stack:
 *	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax
