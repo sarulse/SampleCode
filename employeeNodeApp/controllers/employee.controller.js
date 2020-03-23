@@ -78,12 +78,12 @@ exports.get_ByID = async function (req, res) {
         return client.get(emp_id, (err, result) => {
             if (result) {
                 console.log("key found:" + emp_id);
-                res.send(result);
+                console.log(JSON.parse(result));
+                res.send(JSON.parse(result));
             } else {
                 console.log("key not found");
                 const employee = employees.find(emp => emp.empID === req.params.id);
                 client.setex(emp_id, 3600, JSON.stringify(employee));
-                console.log(employee);
                 if (employee) res.send(employee)
                 else res.status(404).send('The employee with the given ID was not found');
             }
