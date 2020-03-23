@@ -9,7 +9,6 @@ const {
     validationResult
 } = require('express-validator');
 
-
 const axiosConfig = {
     headers: {
         'Content-Type': 'application/json;charset=UTF-8',
@@ -60,7 +59,7 @@ exports.validate = (method) => {
     }
 }
 
-
+// Get all employee records
 exports.get_employees = async function (req, res, next) {
     try {
         console.log("Getting employee list");
@@ -70,7 +69,7 @@ exports.get_employees = async function (req, res, next) {
     }
 
 }
-
+// Get employee record by ID
 exports.get_ByID = async function (req, res) {
     console.log("Getting employee By ID: " + req.params.id);
     const emp_id = "empId:" + req.params.id;
@@ -93,7 +92,7 @@ exports.get_ByID = async function (req, res) {
         return ("Error getting employee by ID from data" + err);
     }
 }
-
+// Updated employee record by ID
 exports.update_ByID = async function (req, res) {
     try {
         const validation_res = validationResult(req);
@@ -128,7 +127,7 @@ exports.update_ByID = async function (req, res) {
         return ("Error updating employee by ID from data" + err);
     }
 }
-
+// Delete employee By ID
 exports.delete_ByID = async function (req, res) {
     console.log("Deleting employee");
     try {
@@ -149,7 +148,7 @@ exports.delete_ByID = async function (req, res) {
     }
 }
 
-
+// post employee record
 exports.create_employee = async function (req, res, next) {
     try {
         const validation_res = validationResult(req);
@@ -165,7 +164,7 @@ exports.create_employee = async function (req, res, next) {
             const empID = uniqid();
             employee.empID = empID;
             // To get quote and joke data from external apis
-            axios.all([
+            await axios.all([
                 axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes'),
                 axios.get(' https://icanhazdadjoke.com/slack')
             ]).then(axios.spread((response1, response2) => {
