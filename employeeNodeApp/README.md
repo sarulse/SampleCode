@@ -1,12 +1,16 @@
 # Node JS App with Express Js
+- A Node Js REST API CRUD app was implemented using Express Js.
 
 ### Tech Stack:
-*	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax, Bootstrap
-*	Framework - Express Js
+*	Languages:Node Js, HTML, CSS, JavaScript, JQuery, Ajax
+*	Framework - Express Js, Bootstrap
 
 
 ### APP UI: http://localhost:3000/public/index.html
-
+- Through the UI, an user can add/update/get/delete a employee record.
+- Once the information is updated, it will be posted as info messages on top of the page.
+- Further the employee list also shows the updated info of each employee without reloading the page.
+- Redis-caching mechanism was used to fetch an existing employee record.
 
 
 ## Implemented End points
