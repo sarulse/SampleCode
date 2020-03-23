@@ -8,12 +8,9 @@ const path = require('path');
 const responseTime = require('response-time')
 
 
-app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
-
-app.use(responseTime());
 
 app.use('/public', express.static(path.join(__dirname, 'views')))
 app.use('/static', express.static(path.join(__dirname, 'assets')))

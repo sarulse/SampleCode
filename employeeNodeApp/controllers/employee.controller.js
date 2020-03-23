@@ -167,7 +167,7 @@ exports.create_employee = async function (req, res, next) {
             await axios.all([
                 axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes'),
                 axios.get(' https://icanhazdadjoke.com/slack')
-            ]).then(axios.spread((response1, response2) => {
+            ], axiosConfig).then(axios.spread((response1, response2) => {
                 let quote_data = response1.data[0];
                 let j_data = response2.data.attachments;
                 let joke_data = j_data.map(({

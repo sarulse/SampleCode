@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express();
 const employee_controller = require('../controllers/employee.controller');
+const responseTime = require('response-time');
 
+router.use(express.json());
+router.use(responseTime());
 
 router.get('/', employee_controller.get_employees);
 
