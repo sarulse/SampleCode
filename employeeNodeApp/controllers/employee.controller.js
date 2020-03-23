@@ -4,6 +4,13 @@ var uniqid = require('uniqid');
 var employee_model = require('../models/employee.model');
 var employees = employee_model.static_employees;
 
+const SimpleNodeLogger = require('simple-node-logger'),
+    opts = {
+        logFilePath: 'employeeApp.log',
+        timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
+    },
+    log = SimpleNodeLogger.createSimpleLogger(opts);
+
 const {
     check,
     validationResult
@@ -22,7 +29,7 @@ var redis = require('redis'),
     client = redis.createClient(6379);
 
 client.on('error', function (err) {
-    console.log('Error ' + err);
+    log.info('Error ' + err);
 });
 
 
@@ -62,7 +69,7 @@ exports.validate = (method) => {
 // Get all employee records
 exports.get_employees = async function (req, res, next) {
     try {
-        console.log("Getting employee list");
+        log.info("Getting employee list");
         res.send(employees);
     } catch (err) {
         return ("Error getting employee list from data" + err);
@@ -71,17 +78,17 @@ exports.get_employees = async function (req, res, next) {
 }
 // Get employee record by ID
 exports.get_ByID = async function (req, res) {
-    console.log("Getting employee By ID: " + req.params.id);
+    log.info("Getting employee By ID: " + req.params.id);
     const emp_id = "empId:" + req.params.id;
     try {
         // Checking employee ID in cache
         return client.get(emp_id, (err, result) => {
             if (result) {
-                console.log("key found:" + emp_id);
-                console.log(JSON.parse(result));
+                log.info("key found:" + emp_id);
+                log.info(JSON.parse(result));
                 res.send(JSON.parse(result));
             } else {
-                console.log("key not found");
+                log.info("key not found");
                 const employee = employees.find(emp => emp.empID === req.params.id);
                 client.setex(emp_id, 3600, JSON.stringify(employee));
                 if (employee) res.send(employee)
@@ -98,17 +105,17 @@ exports.update_ByID = async function (req, res) {
         const validation_res = validationResult(req);
 
         if (!validation_res.isEmpty()) {
-            console.log('Error validating updated employee data');
+            log.info('Error validating updated employee data');
             res.status(422).json({
                 errors: validation_res.array()
             });
             return;
         } else {
             let updated_emp = req.body;
-            console.log("updating employee with ID:" + req.params.id);
+            log.info("updating employee with ID:" + req.params.id);
             const employee = employees.find(emp => emp.empID === req.params.id);
             let index_emp = employees.indexOf(employee);
-            console.log("Index of employee: " + index_emp);
+            log.info("Index of employee: " + index_emp);
             if (employee) {
                 employee.fname = updated_emp.fname;
                 employee.lname = updated_emp.lname;
@@ -129,15 +136,15 @@ exports.update_ByID = async function (req, res) {
 }
 // Delete employee By ID
 exports.delete_ByID = async function (req, res) {
-    console.log("Deleting employee");
+    log.info("Deleting employee");
     try {
-        console.log("Employee requested for delete: " + req.params.id);
+        log.info("Employee requested for delete: " + req.params.id);
         const employee = employees.find(emp => emp.empID === req.params.id);
         let index_emp = employees.indexOf(employee);
-        console.log("Index of employee: " + index_emp);
+        log.info("Index of employee: " + index_emp);
         if (employee) {
             employees.splice(index_emp, 1);
-            console.log(employees);
+            log.info(employees);
             res.send({
                 emp_list: employees,
                 emp: employee
@@ -153,13 +160,13 @@ exports.create_employee = async function (req, res, next) {
     try {
         const validation_res = validationResult(req);
         if (!validation_res.isEmpty()) {
-            console.log('Error validating posted employee data');
+            log.info('Error validating posted employee data');
             res.status(422).json({
                 errors: validation_res.array()
             });
             return;
         } else {
-            console.log("posting data");
+            log.info("posting data");
             var employee = req.body;
             const empID = uniqid();
             employee.empID = empID;
@@ -182,11 +189,11 @@ exports.create_employee = async function (req, res, next) {
                 res.send(employees);
                 res.end();
             })).catch(error => {
-                console.log(error);
+                log.info(error);
             });
         }
     } catch (err) {
-        console.log("Error occured while creating employee record" + err);
+        log.info("Error occured while creating employee record" + err);
         return next(err);
     }
 }
