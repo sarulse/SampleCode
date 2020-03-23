@@ -66,6 +66,27 @@ exports.validate = (method) => {
     }
 }
 
+// To validate "role"
+exports.validate_CEO = (ceo_emp, updated_employee) => {
+    try {
+        if (ceo_emp && (updated_employee.empID === ceo_emp.empID)) { // CEO exists and updating employee is a CEO
+            return true;
+        } else if (ceo_emp && (updated_employee.empID !== ceo_emp.empID)) { // CEO exists but updating employee isn't a CEO
+            if (updated_employee.role === 'CEO') {
+                console.log("Updating CEO role isn't possible since CEO already exists");
+                return false;
+            } else {
+                console.log("There is not a CEO employee");
+                return true;
+            }
+        } else if (!ceo_emp) { // CEO employee doesn't exist
+            return true;
+        }
+    } catch (err) {
+        console.log("Error Validating role");
+    }
+}
+
 // Get all employee records
 exports.get_employees = async function (req, res, next) {
     try {
@@ -103,6 +124,7 @@ exports.get_ByID = async function (req, res) {
 exports.update_ByID = async function (req, res) {
     try {
         const validation_res = validationResult(req);
+        let valid_role = false;
 
         if (!validation_res.isEmpty()) {
             log.info('Error validating updated employee data');
@@ -112,26 +134,40 @@ exports.update_ByID = async function (req, res) {
             return;
         } else {
             let updated_emp = req.body;
-            log.info("updating employee with ID:" + req.params.id);
+            console.log("updating employee with ID:" + req.params.id);
             const employee = employees.find(emp => emp.empID === req.params.id);
-            let index_emp = employees.indexOf(employee);
-            log.info("Index of employee: " + index_emp);
-            if (employee) {
-                employee.fname = updated_emp.fname;
-                employee.lname = updated_emp.lname;
-                employee.hdate = updated_emp.hdate
-                employee.role = updated_emp.role;
-                employees.splice(index_emp, 1, employee);
-                res.send({
-                    emp_list: employees,
-                    emp: employee
-                });
+            console.log("Employee");
+            console.log(employee);
+            let ceo = employees.find(emp => emp.role === "CEO");
+            console.log("CEO employee");
+            console.log(ceo);
+            console.log("Found employee iD:" + employee.empID);
+
+            if (employee.empID != null) {
+                valid_role = exports.validate_CEO(ceo, updated_emp);
+                // Validate role
+                if (valid_role) {
+                    let index_emp = employees.indexOf(employee);
+                    log.info("Index of employee: " + index_emp);
+                    employee.fname = updated_emp.fname;
+                    employee.lname = updated_emp.lname;
+                    employee.hdate = updated_emp.hdate;
+                    employee.role = updated_emp.role;
+                    employees.splice(index_emp, 1, employee);
+                    res.send({
+                        emp_list: employees,
+                        emp: employee
+                    });
+                } else {
+                    res.status(404).send('CEO already exists, hence employee can\'t update the role to CEO');
+                }
             } else {
-                res.status(404).send('The employee with the given ID coudln\'t be updated');
+                res.status(404).send('The employee with the given ID coudln\'t be found, hence can\'t updated');
             }
         }
+
     } catch (err) {
-        return ("Error updating employee by ID from data" + err);
+        return ("Error updating employee by ID from request data" + err);
     }
 }
 // Delete employee By ID
@@ -185,9 +221,17 @@ exports.create_employee = async function (req, res, next) {
                     employee.quote = quote_data;
                     employee.joke = joke_data;
                 }
-                employees.push(employee);
-                res.send(employees);
-                res.end();
+                let ceo = employees.find(emp => emp.role === "CEO");
+                valid_role = exports.validate_CEO(ceo, employee);
+                // Validate Posted employee's role
+                if (valid_role) {
+                    employees.push(employee);
+                    res.send(employees);
+                    res.end();
+                } else {
+                    console.log('Employee with CEO role already exists, hence CEO employee can\'t be added');
+                    res.status(404).send('Employee with CEO role already exists, hence CEO employee can\'t be added');
+                }
             })).catch(error => {
                 log.info(error);
             });
