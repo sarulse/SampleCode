@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "express": "~4.16.4",
+    "express": "~4.17.3",
     "express-validator": "^6.4.0",
     "fs": "0.0.1-security",
     "redis-cache": "^0.2.1",
